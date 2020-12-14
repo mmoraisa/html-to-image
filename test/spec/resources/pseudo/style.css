@@ -10,6 +10,24 @@
 .with-both::after {
   content: 'BOTHAFTER';
 }
+.with-scroll {
+  width: 300px;
+  height: 50px;
+  overflow: scroll;
+}
+.with-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+.with-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.with-scroll::-webkit-scrollbar-thumb {
+  background: #888;
+}
+.with-scroll::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 
 #dom-node {
   background-color: white;
