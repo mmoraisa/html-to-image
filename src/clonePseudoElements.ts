@@ -4,14 +4,14 @@ export function clonePseudoElements(
   nativeNode: HTMLElement,
   clonedNode: HTMLElement,
 ) {
-  const pseudos = [':before', ':after']
+  const pseudos = [':before', ':after', '::-webkit-scrollbar', '::-webkit-scrollbar-track', '::-webkit-scrollbar-thumb']
   pseudos.forEach((pseudo: Pseudo.Type) =>
     Pseudo.clonePseudoElement(nativeNode, clonedNode, pseudo),
   )
 }
 
 namespace Pseudo {
-  export type Type = ':before' | ':after'
+  export type Type = ':before' | ':after' | '::-webkit-scrollbar' | '::-webkit-scrollbar-track' | '::-webkit-scrollbar-thumb'
 
   export function clonePseudoElement(
     nativeNode: HTMLElement,
